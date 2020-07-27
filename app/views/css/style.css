@@ -1,0 +1,169 @@
+﻿body {
+    overflow: hidden; /* Hide scrollbars */
+    font-family: 'Comic Neue', cursive;
+}
+
+    body::after {
+        content: "";
+        background-image: url(../img/background.jpg);
+        background-repeat: repeat;
+        opacity: 0.15;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    color: aqua;
+}
+
+#levels {
+    margin-left: auto;
+}
+
+    #logo {
+        width: 7%;
+        margin: 2%;
+    }
+
+    p {
+        color: red;
+        font-weight: 900;
+        font-size: 30px;
+    }
+
+main {
+    margin-top: -17vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.check {
+    position: relative;
+    top: 0;
+    width: 30vw;
+    height: 5vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    text-align: center;
+    cursor: pointer
+}
+
+.info {
+    height: 1vw;
+    position: relative;
+    top: 0;
+    width: 30vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    text-align: center;
+    cursor: pointer
+}
+
+img {
+    position: relative;
+    width: 30%;
+    margin: auto;
+    top: -5vh;
+    cursor: pointer;
+}
+
+.info_pic {
+    width: 20%;
+}
+
+button {
+    margin-top: 15vh;
+    background: red;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    color: white;
+    outline: none;
+    z-index: 2;
+}
+
+.animation_on_result {
+    animation: pulse 1s 1;
+}
+
+.animation_on_negative_result {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+}
+
+#start {
+    animation: pulse 2s infinite;
+    border: 3px yellow solid
+}
+
+#result {
+    display: none;
+    border: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.fa-arrow-right {
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+}
