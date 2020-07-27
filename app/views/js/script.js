@@ -102,14 +102,15 @@ let end_count;
 let number_of_passed_questions = 0;
 
 function check(id) {
-
     clearInterval(end_count);
 
 
         if (beginning == 1) {
             var child = document.getElementById(id).childNodes;
 
-            let cut_path = child[0].src.substring(31, (child[0].src).length - 4);
+            let cut_path = child[0].src.substring(39, (child[0].src).length - 4);
+
+            console.log(cut_path)
 
             answer = cut_path;
 
